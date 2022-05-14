@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+*{
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+
+// Primary
+
+$Light-Pink: #ffa399;
+$Strong-pink: #ff4d97;
+
+// Neutral
+
+$Pale-Blue: #dddbff;
+$Grayish-Blue: #848794;
+$Dark-Blue: #1d2c67;
+$Very-Dark-Blue: #0c122c;
+
+// Typography
+
+$Font-size: 14px;
+$Font-Family: 'Raleway', sans-serif;
+
+
+body{
+background-color: #0c122c;
+}
+main{
+    min-width: 375px;
+}
+figure{
+  background: url("../images/bg-mobile.png") no-repeat fixed 100%;
+  background-size: cover;
+  min-height: 100vh; 
+}
+
+
+
+
+// // Desktop bg-pattern
+// figure{
+//   background: url("../images/bg-desktop.png") no-repeat fixed 100% 100%;
+//   background-size:contain;
+//   min-height: 100vh;
+  
+// }
