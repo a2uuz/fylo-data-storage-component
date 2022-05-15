@@ -7,16 +7,155 @@
 }
 
 body {
-  background-color: #0c122c;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+
+.bg {
+  background: url("../images/bg-mobile.png") no-repeat fixed 100%;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 main {
   min-width: 375px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
 }
 
-figure {
-  background: url("../images/bg-mobile.png") no-repeat fixed 100%;
-  background-size: cover;
-  min-height: 100vh;
+.top {
+  background-color: #1d2c67;
+  margin: 2rem 2rem 0.5rem 2rem;
+  width: 90%;
+  padding: 3rem;
+  border-radius: 1rem 5rem 1rem 1rem;
+}
+
+.top .icons {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.top .icon {
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: #0c122c;
+  border-radius: 10px;
+}
+
+.bottom {
+  background-color: #1d2c67;
+  margin: 0.5rem 2rem 2rem 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  height: 30%;
+  padding: 3rem;
+}
+
+.bottom p {
+  font-size: 0.8rem;
+  color: #dddbff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.bottom .range {
+  background-color: #0c122c;
+  padding: 0.2rem;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.bottom .range .primary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-radius: 100px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
+  background-image: linear-gradient(to right, #ffa399, #ff4d97);
+  width: 75%;
+}
+
+.bottom .range .circle {
+  border-radius: 100px;
+  width: 15px;
+  height: 15px;
+  background: white;
+}
+
+.bottom .range-labels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #dddbff;
+  font-size: small;
+  font-weight: 600;
+}
+
+.bottom footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: large;
+  width: 160px;
+  height: 75px;
+  background-color: white;
+  border-radius: 0.9rem;
+  position: relative;
+  top: 59%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.bottom footer strong {
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+.bottom footer span {
+  font-size: small;
+  font-weight: 800;
+  color: #848794;
 }
 /*# sourceMappingURL=style.css.map */
