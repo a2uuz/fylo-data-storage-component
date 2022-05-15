@@ -15,9 +15,35 @@
     <link rel="stylesheet" href="./css/style.css" />
     <title>Frontend Mentor | Fylo data storage component</title>
   </head>
-  <body>
+  <body class="bg">
     <main>
-      <figure class="bg"></figure>
+      <section class="top left">
+        <img src="./images/logo.svg" alt="" />
+
+            <div class="icons">
+               <img src="images/icon-document.svg" class="icon" alt="Documents">
+               <img src="images/icon-folder.svg"  class="icon"  alt="Folder">
+               <img src="images/icon-upload.svg" class="icon"  alt="uplode_files">
+           </div>
+      </section>
+
+
+      <section class="bottom right">
+        <p>You’ve used <strong>815 GB</strong> of your storage</p>
+      <div class="range">
+          <div class="primary">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+        <div class="range-labels">
+          <span>0 GB</span>
+          <span>1000 GB</span>
+        </div>
+        <footer><strong>185</strong> 
+          <span>GB LEFT</span>
+        </footer>
+      </section>
     </main>
     <!-- 
 You’ve used 815 GB of your storage
