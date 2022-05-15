@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 
-*{
-box-sizing: border-box;
-padding: 0;
-margin: 0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 // Primary
@@ -21,28 +21,119 @@ $Very-Dark-Blue: #0c122c;
 // Typography
 
 $Font-size: 14px;
-$Font-Family: 'Raleway', sans-serif;
+$Font-Family: "Raleway", sans-serif;
 
+// Varibales
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @content;
+}
 
-body{
-background-color: #0c122c;
+body {
+  font-family: $Font-Family;
+  font-size: $Font-size;
 }
-main{
-    min-width: 375px;
-}
-figure{
+.bg {
   background: url("../images/bg-mobile.png") no-repeat fixed 100%;
   background-size: cover;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
+main {
+  min-width: 375px;
+  @include flex();
+  flex-direction: column;
+  height: 100vh;
+}
 
+.top {
+  background-color: $Dark-Blue;
+  margin: 2rem 2rem 0.5rem 2rem;
+  width: 90%;
+  padding: 3rem;
+  border-radius: 1rem 5rem 1rem 1rem;
+  .icons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+  }
+  .icon {
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: hsl(229, 57%, 11%);
+    border-radius: 10px;
+  }
+}
+.bottom {
+  background-color: #1d2c67;
+  margin: 0.5rem 2rem 2rem 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  height: 30%;
+  padding: 3rem;
 
+  p {
+    font-size: 0.8rem;
+    color: $Pale-Blue;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .range {
+    background-color: #0c122c;
+    padding: 0.2rem;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
 
-// // Desktop bg-pattern
-// figure{
-//   background: url("../images/bg-desktop.png") no-repeat fixed 100% 100%;
-//   background-size:contain;
-//   min-height: 100vh;
-  
-// }
+    .primary {
+      @include flex();
+      justify-content: flex-end;
+      border-radius: 100px;
+      background-image: linear-gradient(
+        to right,
+        hsl(6, 100%, 80%),
+        hsl(335, 100%, 65%)
+      );
+      width: 75%;
+    }
+    .circle {
+      border-radius: 100px;
+      width: 15px;
+      height: 15px;
+      background: white;
+    }
+  }
+
+  .range-labels {
+    @include flex();
+    justify-content: space-between;
+    color: $Pale-Blue;
+    font-size: small;
+    font-weight: 600;
+  }
+
+  footer {
+    @include flex();
+    font-size: large;
+    width: 160px;
+    height: 75px;
+    background-color: white;
+    border-radius: 0.9rem;
+    position: relative;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    strong {
+      font-size: 2rem;
+      padding: 0.5rem;
+    }
+    span {
+      font-size: small;
+      font-weight: 800;
+      color: $Grayish-Blue;
+    }
+  }
+}
