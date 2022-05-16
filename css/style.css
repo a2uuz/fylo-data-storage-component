@@ -9,6 +9,7 @@
 body {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
+  overflow: hidden;
 }
 
 .bg {
@@ -19,6 +20,8 @@ body {
 
 main {
   min-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,7 +35,6 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
 }
 
 .top {
@@ -52,8 +54,8 @@ main {
 }
 
 .top .icon {
-  width: 60px;
-  height: 60px;
+  width: 57px;
+  height: 55px;
   padding: 1rem;
   background: #0c122c;
   border-radius: 10px;
@@ -138,7 +140,7 @@ main {
           align-items: center;
   font-size: large;
   width: 160px;
-  height: 75px;
+  height: 65px;
   background-color: white;
   border-radius: 0.9rem;
   position: relative;
@@ -157,5 +159,92 @@ main {
   font-size: small;
   font-weight: 800;
   color: #848794;
+}
+
+@media (min-width: 675px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 70%;
+    gap: 1.2rem;
+  }
+  html {
+    background-color: #0c122c;
+  }
+  .bg {
+    background: url("../images/bg-desktop.png") no-repeat fixed 100% 120%;
+    background-size: contain;
+  }
+  .left {
+    margin: 0;
+    width: 55%;
+    padding: 2rem 3rem;
+  }
+  .right {
+    margin: 0;
+    padding: 2rem 2rem;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .right .sub-container-two {
+    width: 100%;
+  }
+  .right footer {
+    position: absolute;
+    top: 42%;
+    left: 76%;
+  }
+  .right footer::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #fff;
+    border-right-color: #fff;
+    top: 50px;
+    left: 120px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
