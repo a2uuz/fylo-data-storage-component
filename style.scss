@@ -34,6 +34,7 @@ $Font-Family: "Raleway", sans-serif;
 body {
   font-family: $Font-Family;
   font-size: $Font-size;
+  overflow: hidden;
 }
 .bg {
   background: url("../images/bg-mobile.png") no-repeat fixed 100%;
@@ -43,9 +44,10 @@ body {
 
 main {
   min-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
   @include flex();
   flex-direction: column;
-  height: 100vh;
 }
 
 .top {
@@ -60,8 +62,8 @@ main {
     gap: 1rem;
   }
   .icon {
-    width: 60px;
-    height: 60px;
+    width: 57px;
+    height: 55px;
     padding: 1rem;
     background: hsl(229, 57%, 11%);
     border-radius: 10px;
@@ -118,7 +120,7 @@ main {
     @include flex();
     font-size: large;
     width: 160px;
-    height: 75px;
+    height: 65px;
     background-color: white;
     border-radius: 0.9rem;
     position: relative;
@@ -134,6 +136,63 @@ main {
       font-size: small;
       font-weight: 800;
       color: $Grayish-Blue;
+    }
+  }
+}
+
+@media (min-width: 675px) {
+  body {
+    @include flex();
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  main {
+    @include flex();
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 70%;
+    gap: 1.2rem;
+  }
+  html {
+    background-color: $Very-Dark-Blue;
+  }
+  .bg {
+    background: url("../images/bg-desktop.png") no-repeat fixed 100% 120%;
+    background-size: contain;
+  }
+  .left {
+    margin: 0;
+    width: 55%;
+    padding: 2rem 3rem;
+  }
+  .right {
+    margin: 0;
+    padding: 2rem 2rem;
+    align-self: flex-end;
+    @include flex();
+
+
+    .sub-container-two {
+      width: 100%;
+    }
+
+    footer {
+      position: absolute;
+      top: 42%;
+      left: 76%;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-top-color: #fff;
+        border-right-color: #fff;
+        top: 50px;
+        left: 120px;
+      }
     }
   }
 }
